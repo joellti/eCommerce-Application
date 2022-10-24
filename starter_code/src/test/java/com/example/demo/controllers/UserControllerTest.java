@@ -26,7 +26,7 @@ public class UserControllerTest {
         userController = new UserController();
         TestUtils.injectObjects(userController, "userRepository", userRepository);
         TestUtils.injectObjects(userController, "cartRepository", cartRepository);
-        //TestUtils.injectObjects(userController, "bCryptPasswordEncoder", bCryptPasswordEncoder);
+        TestUtils.injectObjects(userController, "bCryptPasswordEncoder", bCryptPasswordEncoder);
     }
 
     @Test
@@ -34,8 +34,8 @@ public class UserControllerTest {
         when(bCryptPasswordEncoder.encode(any())).thenReturn("thisIsHashed");
         CreateUserRequest r = new CreateUserRequest();
         r.setUsername("test");
-        //r.setPassword("testPassword");
-        //r.setConfirmPassword("testPassword");
+        r.setPassword("testPassword");
+        r.setConfirmPassword("testPassword");
 
         final ResponseEntity<User> response = userController.createUser(r);
 
@@ -46,7 +46,7 @@ public class UserControllerTest {
         assertNotNull(u);
         assertEquals(0, u.getId());
         assertEquals("test", u.getUsername());
-        //assertEquals("thisIsHashed", u.getPasswrod());
+        //assertEquals("thisIsHashed", u.getPassword());
 
     }
 
