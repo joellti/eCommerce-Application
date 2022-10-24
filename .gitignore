@@ -1,3 +1,7 @@
 .idea/
 target/
 *.iml
+mvnw
+mvnw.cmd
+.mvn/
+!.mvn/wrapper/maven-wrapper.jar
