@@ -2,3 +2,5 @@
 target/
 *.iml
 .vscode/
+/starter_code/.attach_pid119304
+/app.log

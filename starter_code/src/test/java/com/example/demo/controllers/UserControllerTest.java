@@ -11,6 +11,8 @@ import static org.junit.Assert.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import java.util.Optional;
+
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -47,6 +49,33 @@ public class UserControllerTest {
         assertEquals(0, u.getId());
         assertEquals("test", u.getUsername());
         assertEquals("thisIsHashed", u.getPassword());
+
+    }
+
+    @Test
+    public void get_user() throws Exception {
+
+        User userMock = new User();
+
+        when(userRepository.findByUsername(any())).thenReturn(userMock);
+        final ResponseEntity<User> response = userController.findByUserName("test");
+
+        assertNotNull(response);
+        assertEquals(200, response.getStatusCodeValue());
+
+    }
+
+    @Test
+    public void get_user_by_id() throws Exception {
+
+        User userMock = new User();
+        Optional<User> userMockOpt = Optional.of(userMock);
+
+        when(userRepository.findById(any())).thenReturn(userMockOpt);
+        final ResponseEntity<User> response = userController.findById(Long.valueOf(1));
+
+        assertNotNull(response);
+        assertEquals(200, response.getStatusCodeValue());
 
     }
 
