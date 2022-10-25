@@ -10,12 +10,15 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>auth-course</artifactId>
-	<!--<packaging>war</packaging>-->
+	<!-- Package as JAR: mvn package -Dp.type=jar -->
+	<!-- Package as WAR: mvn package -->
+	<packaging>${p.type}</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>auth-course</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
+		<p.type>war</p.type>
 		<java.version>1.8</java.version>
     	<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 	</properties>
