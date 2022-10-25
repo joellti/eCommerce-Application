@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>auth-course</artifactId>
+	<artifactId>ecommerce</artifactId>
 	<!-- Package as JAR: mvn package -Dp.type=jar -->
 	<!-- Package as WAR: mvn package -->
 	<packaging>${p.type}</packaging>
@@ -69,6 +69,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>${project.artifactId}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
