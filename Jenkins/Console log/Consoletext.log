@@ -1,0 +1,165 @@
+Started by user admin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/eCommerce-Application
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+The recommended git tool is: NONE
+using credential df06d768-47df-48c2-b140-1198d950485c
+Cloning the remote Git repository
+Cloning repository https://github.com/joellti/eCommerce-Application
+ > git init /var/jenkins_home/workspace/eCommerce-Application # timeout=10
+Fetching upstream changes from https://github.com/joellti/eCommerce-Application
+ > git --version # timeout=10
+ > git --version # 'git version 2.36.2'
+using GIT_SSH to set credentials 
+Verifying host key using known hosts file
+You're using 'Known hosts file' strategy to verify ssh host keys, but your known_hosts file does not exist, please go to 'Manage Jenkins' -> 'Configure Global Security' -> 'Git Host Key Verification Configuration' and configure host key verification.
+ > git fetch --tags --force --progress -- https://github.com/joellti/eCommerce-Application +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/joellti/eCommerce-Application # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 9af9c078a156ff645d12a8f39e4b19358b55a285 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9af9c078a156ff645d12a8f39e4b19358b55a285 # timeout=10
+Commit message: "."
+ > git rev-list --no-walk 91fd728d0276cc0bffed71603620ac33533d2ca6 # timeout=10
+[eCommerce-Application] $ mvn -f starter_code/pom.xml -DskipTests=true clean install package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.example:ecommerce >------------------------
+[INFO] Building auth-course 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ ecommerce ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ ecommerce ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ ecommerce ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 20 source files to /var/jenkins_home/workspace/eCommerce-Application/starter_code/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ ecommerce ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/eCommerce-Application/starter_code/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ ecommerce ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to /var/jenkins_home/workspace/eCommerce-Application/starter_code/target/test-classes
+[INFO] /var/jenkins_home/workspace/eCommerce-Application/starter_code/src/test/java/com/example/demo/TestUtils.java: /var/jenkins_home/workspace/eCommerce-Application/starter_code/src/test/java/com/example/demo/TestUtils.java uses or overrides a deprecated API.
+[INFO] /var/jenkins_home/workspace/eCommerce-Application/starter_code/src/test/java/com/example/demo/TestUtils.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ ecommerce ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-war-plugin:3.2.2:war (default-war) @ ecommerce ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [ecommerce] in [/var/jenkins_home/workspace/eCommerce-Application/starter_code/target/ecommerce]
+[INFO] Processing war project
+[INFO] Webapp assembled in [158 msecs]
+[INFO] Building war: /var/jenkins_home/workspace/eCommerce-Application/starter_code/target/ecommerce.war
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.5.RELEASE:repackage (repackage) @ ecommerce ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ ecommerce ---
+[INFO] Installing /var/jenkins_home/workspace/eCommerce-Application/starter_code/target/ecommerce.war to /root/.m2/repository/com/example/ecommerce/0.0.1-SNAPSHOT/ecommerce-0.0.1-SNAPSHOT.war
+[INFO] Installing /var/jenkins_home/workspace/eCommerce-Application/starter_code/pom.xml to /root/.m2/repository/com/example/ecommerce/0.0.1-SNAPSHOT/ecommerce-0.0.1-SNAPSHOT.pom
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ ecommerce ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ ecommerce ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 20 source files to /var/jenkins_home/workspace/eCommerce-Application/starter_code/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ ecommerce ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/eCommerce-Application/starter_code/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ ecommerce ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to /var/jenkins_home/workspace/eCommerce-Application/starter_code/target/test-classes
+[INFO] /var/jenkins_home/workspace/eCommerce-Application/starter_code/src/test/java/com/example/demo/TestUtils.java: /var/jenkins_home/workspace/eCommerce-Application/starter_code/src/test/java/com/example/demo/TestUtils.java uses or overrides a deprecated API.
+[INFO] /var/jenkins_home/workspace/eCommerce-Application/starter_code/src/test/java/com/example/demo/TestUtils.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ ecommerce ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-war-plugin:3.2.2:war (default-war) @ ecommerce ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [ecommerce] in [/var/jenkins_home/workspace/eCommerce-Application/starter_code/target/ecommerce]
+[INFO] Processing war project
+[INFO] Webapp assembled in [75 msecs]
+[INFO] Building war: /var/jenkins_home/workspace/eCommerce-Application/starter_code/target/ecommerce.war
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.5.RELEASE:repackage (repackage) @ ecommerce ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.948 s
+[INFO] Finished at: 2022-10-25T21:07:01Z
+[INFO] ------------------------------------------------------------------------
+SSH: Connecting from host [42f7fc10f2e1]
+SSH: Connecting with configuration [Host_2] ...
+SSH: Creating session: username [host2admin], hostname [172.31.88.160], port [22]
+SSH: Connecting session ...
+SSH: Connected
+SSH: Opening SFTP channel ...
+SSH: SFTP channel open
+SSH: Connecting SFTP channel ...
+SSH: Connected
+SSH: Remote root is not absolute, getting absolute directory from PWD
+SSH: cd [/home/host2admin]
+SSH: OK
+SSH: cd [/opt/docker]
+SSH: OK
+SSH: put [ecommerce.war]
+SSH: OK
+SSH: Opening exec channel ...
+SSH: EXEC: channel open
+SSH: EXEC: STDOUT/STDERR from command [docker stop demo_container;  
+docker rm -f demo_container;
+docker stop demo_image;  
+docker rm -f demo_image; 
+docker image rm -f demo_image; 
+cd /opt/docker; 
+docker build -t demo_image .] ...
+SSH: EXEC: connected
+demo_container
+demo_container
+Error response from daemon: No such container: demo_image
+Error: No such container: demo_image
+Untagged: demo_image:latest
+Deleted: sha256:2c9a6ee88ce14cdae7296a4b107d09700939ad1b06b4d7ef66027f5ba7ef9c33
+Deleted: sha256:d87043e9fddcb1949228da35366c161df502d07354a55c17e650658f2a2d74ec
+Deleted: sha256:952f07d7cd681556be4638146e8b88b51804439af9d57201035189eba9ab7fe1
+Sending build context to Docker daemon   44.6MB
+
+Step 1/3 : From tomcat:9.0.68-jdk8-corretto-al2
+ ---> 82a56671f5de
+Step 2/3 : MAINTAINER "Udacity"
+ ---> Running in 9a8a45a28619
+Removing intermediate container 9a8a45a28619
+ ---> 99d5b6224b49
+Step 3/3 : COPY ./*.war /usr/local/tomcat/webapps
+ ---> fe638f369e07
+Successfully built fe638f369e07
+Successfully tagged demo_image:latest
+SSH: EXEC: completed after 2,202 ms
+SSH: Opening exec channel ...
+SSH: EXEC: channel open
+SSH: EXEC: STDOUT/STDERR from command [docker run -d --name demo_container -p 8888:8080 demo_image] ...
+SSH: EXEC: connected
+37d951b0a36fe1ff8fa8cc31aac49f9780cd76dde4de568f39088cadb24ef713
+SSH: EXEC: completed after 601 ms
+SSH: Disconnecting configuration [Host_2] ...
+SSH: Transferred 1 ( 1 + 0 ) file(s)
+Finished: SUCCESS
