@@ -1,0 +1,448 @@
+{
+	"info": {
+		"_postman_id": "d99dbc0d-d754-43c2-be46-a3d53c21cc0d",
+		"name": "eCommerce-Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1-CreateUser-localhost",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Sareeta\",\r\n    \"password\": \"sryhsfhfghfg\",\r\n    \"confirmPassword\": \"sryhsfhfghfg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-CreateUser-aws",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Sareeta\",\r\n    \"password\": \"sryhsfhfghfg\",\r\n    \"confirmPassword\": \"sryhsfhfghfg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.158.147.231:8888/ecommerce/api/user/create",
+					"protocol": "http",
+					"host": [
+						"54",
+						"158",
+						"147",
+						"231"
+					],
+					"port": "8888",
+					"path": [
+						"ecommerce",
+						"api",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-CreateUser-localhost-error",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Sareeta\",\r\n    \"password\": \"sryhsfhfghfg\",\r\n    \"confirmPassword\": \"sryhsfhfghf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2-GetToken-localhost",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Sareeta\",\r\n    \"password\": \"sryhsfhfghfg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2-GetToken-aws",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Sareeta\",\r\n    \"password\": \"sryhsfhfghfg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.158.147.231:8888/ecommerce/login",
+					"protocol": "http",
+					"host": [
+						"54",
+						"158",
+						"147",
+						"231"
+					],
+					"port": "8888",
+					"path": [
+						"ecommerce",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3-GetUser-localhost",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTYXJlZXRhIiwiZXhwIjoxNjY3NTM3MjUxfQ.g_Xexa9v1naWDbG3_plVnQD4Xfe4wGSq4EG23cTbECiPsus72zakRDOdxaJLOsYo4mpRfB-o5MOvpAY3VLPGpg",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/user/Sareeta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"Sareeta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3-GetUserById-localhost",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTYXJlZXRhIiwiZXhwIjoxNjY3NTM3MjUxfQ.g_Xexa9v1naWDbG3_plVnQD4Xfe4wGSq4EG23cTbECiPsus72zakRDOdxaJLOsYo4mpRfB-o5MOvpAY3VLPGpg",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/user/id/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4-GetItems-localhost",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTYXJlZXRhIiwiZXhwIjoxNjY3NTM3MjUxfQ.g_Xexa9v1naWDbG3_plVnQD4Xfe4wGSq4EG23cTbECiPsus72zakRDOdxaJLOsYo4mpRfB-o5MOvpAY3VLPGpg",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/item",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4-GetItems-aws",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTYXJlZXRhIiwiZXhwIjoxNjY3NTk2MjIzfQ.IrxMbdLc-Mw0gWyhH6djzGpePNAkElWKHVnH1uFeech4iHFdNa2SPIJ75HerJHfeEoFRukVUhlp3krmjDjzQ6g",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://54.158.147.231:8888/ecommerce/api/item",
+					"protocol": "http",
+					"host": [
+						"54",
+						"158",
+						"147",
+						"231"
+					],
+					"port": "8888",
+					"path": [
+						"ecommerce",
+						"api",
+						"item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5-AddItemToCart-localhost",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTYXJlZXRhIiwiZXhwIjoxNjY3NTM3MjUxfQ.g_Xexa9v1naWDbG3_plVnQD4Xfe4wGSq4EG23cTbECiPsus72zakRDOdxaJLOsYo4mpRfB-o5MOvpAY3VLPGpg",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Sareeta\",\r\n    \"itemId\": 1,\r\n    \"quantity\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/cart/addToCart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cart",
+						"addToCart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6-SubmitOrder-localhost",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTYXJlZXRhIiwiZXhwIjoxNjY3NTM3MjUxfQ.g_Xexa9v1naWDbG3_plVnQD4Xfe4wGSq4EG23cTbECiPsus72zakRDOdxaJLOsYo4mpRfB-o5MOvpAY3VLPGpg",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/order/submit/Sareeta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"order",
+						"submit",
+						"Sareeta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6-SubmitOrder-error-localhost",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTYXJlZXRhIiwiZXhwIjoxNjY3NTM3MjUxfQ.g_Xexa9v1naWDbG3_plVnQD4Xfe4wGSq4EG23cTbECiPsus72zakRDOdxaJLOsYo4mpRfB-o5MOvpAY3VLPGpg",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/order/submit/Sareet2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"order",
+						"submit",
+						"Sareet2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7-OrderHistory-localhost",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTYXJlZXRhIiwiZXhwIjoxNjY3NTM3MjUxfQ.g_Xexa9v1naWDbG3_plVnQD4Xfe4wGSq4EG23cTbECiPsus72zakRDOdxaJLOsYo4mpRfB-o5MOvpAY3VLPGpg",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/order/history/Sareeta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"order",
+						"history",
+						"Sareeta"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
