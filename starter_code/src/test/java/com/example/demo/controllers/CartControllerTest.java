@@ -68,7 +68,7 @@ public class CartControllerTest {
     }
 
     @Test
-    public void removeFromcart() {
+    public void removeFromCart() {
 
         ModifyCartRequest r = new ModifyCartRequest();
         r.setUsername("test");
